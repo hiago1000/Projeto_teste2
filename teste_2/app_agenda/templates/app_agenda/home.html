@@ -1,0 +1,26 @@
+﻿
+<h1>Agenda Pública</h1>
+{% for agenda in object_list %}
+	{% if agenda.publica == True %}
+<div>
+
+	<h2>{{ agenda.titulo }}</h2>
+	<p>{{ agenda.anotacoes | linebreaksbr }}</p>
+	<br>
+</div>
+	{%endif%}
+{% endfor %}
+
+
+<h1>Agenda Institucional</h1>
+{% for agenda_global in object_list %}
+	{% if agenda_global.publica == True %}
+<div>
+
+	<h2>{{ agenda_global.titulo }}</h2>
+	<p>{{ agenda_global.anotacoes | linebreaksbr }}</p>
+	<br>
+</div>
+	{%endif%}
+{% endfor %}
+
